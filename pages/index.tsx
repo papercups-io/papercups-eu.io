@@ -1,12 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import {Component} from 'react';
-import ReactGA from 'react-ga';
 import posthog from 'posthog-js';
 import {Box, Flex} from 'rebass';
 import {ChatWidget, Papercups} from '@papercups-io/chat-widget';
 
-import {RightCircleOutlined, GithubOutlined} from '../components/icons';
+import {RightCircleOutlined} from '../components/icons';
 import {
   colors,
   Button,
@@ -22,13 +21,6 @@ import {
 
 export default class extends Component {
   componentDidMount() {
-    const {NEXT_PUBLIC_GA_TRACKING_ID} = process.env;
-
-    if (NEXT_PUBLIC_GA_TRACKING_ID) {
-      ReactGA.initialize(NEXT_PUBLIC_GA_TRACKING_ID);
-      ReactGA.pageview(document.location.pathname);
-    }
-
     posthog.init('cQo4wipp5ipWWXhTN8kTacBItgqo457yDRtzCMOr-Tw', {
       api_host: 'https://app.posthog.com',
     });
@@ -39,7 +31,7 @@ export default class extends Component {
       <Layout style={{background: colors.white}}>
         <Head>
           <title>Papercups | Open Source Intercom Alternative</title>
-          <link rel="icon" href="/logo-v2.svg" />
+          <link rel="icon" href="/logo-eu-no-text.svg" />
           <meta
             name="description"
             content="Papercups is an open-source live chat widget. Chat with your customers to improve conversions and customer satisfaction."
@@ -52,7 +44,7 @@ export default class extends Component {
               <Link href="/">
                 <a>
                   <img
-                    src="/papercups-v2.svg"
+                    src="/papercups-eu.svg"
                     style={{height: 40, width: 160}}
                   />
                 </a>
@@ -91,7 +83,7 @@ export default class extends Component {
                 </Menu.Item>
                 <Menu.Item style={{margin: '0 1em'}} key="Sign up">
                   <a
-                    href="https://app.papercups.io"
+                    href="https://app.papercups-eu.io"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -107,20 +99,24 @@ export default class extends Component {
           <Box mx="auto" style={{maxWidth: 960}} py={5} px={4}>
             <Flex mb={[5, 6]} mx={[0, -4]} flexDirection={['column', 'row']}>
               <Box pt={100} flex={1} mx={[0, 4]} mb={[4, 0]}>
-                <Box mb={6}>
-                  <Title level={1}>
-                    Connect and chat with customers from your website
+                <Box mb={5}>
+                  <Title>
+                    Open source and GDPR compliant Intercom alternative
                   </Title>
 
                   <Paragraph>
-                    Open source customer messaging, built for startups and
-                    enterprise alike.
+                    Papercups{' '}
+                    <div style={{fontSize: 'smaller', display: 'inline'}}>
+                      eu
+                    </div>{' '}
+                    is a highly customizable and open-source live customer chat
+                    tool. Hosted in EU (Germany) 🇪🇺
                   </Paragraph>
 
                   <Flex my={3}>
                     <Box mr={2}>
                       <a
-                        href="https://app.papercups.io/demo"
+                        href="https://app.papercups-eu.io/demo"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -131,7 +127,7 @@ export default class extends Component {
                     </Box>
                     <Box mr={2}>
                       <a
-                        href="https://app.papercups.io/register?redirect=/account/getting-started"
+                        href="https://app.papercups-eu.io/register?redirect=/account/getting-started"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -163,7 +159,7 @@ export default class extends Component {
                       height: '100%',
                       minHeight: 320,
                     }}
-                    src="chatting.svg"
+                    src="eu.svg"
                   />
                 </Flex>
               </Box>
@@ -185,17 +181,17 @@ export default class extends Component {
                       height: '100%',
                       minHeight: 320,
                     }}
-                    src="setup.svg"
+                    src="map.svg"
                   />
                 </Flex>
               </Box>
 
               <Box flex={1} mx={[0, 4]} my={[4, 0]}>
-                <Title level={2}>Reply directly from Slack</Title>
-                <Paragraph>
-                  Directly talk to your users from a single Slack channel.
-                  Remove the friction of having to login to another dashboard.
-                  Set up our Slack integration in minutes.
+                <Title level={2}>Transparent and hosted in EU </Title>
+                <Paragraph className=".index_page_font">
+                  Papercups is open source so you can verify exactly how we are
+                  processing your customer's data. Papercups-eu is hosted in
+                  Europe so it complies with local data soverignty laws
                 </Paragraph>
               </Box>
             </Flex>
@@ -206,35 +202,18 @@ export default class extends Component {
               flexDirection={['column-reverse', 'row']}
             >
               <Box flex={1} mx={[0, 4]} mb={[4, 0]}>
-                <Title level={3}>Brand and customize your widget</Title>
+                <Title level={3}>GDPR compliant and no cookie banners</Title>
                 <Paragraph>
-                  Our widget is highly customizable. Change your color,
-                  greetings, text and more through our simple UI without needing
-                  any code.
+                  Papercups is fully compliant with GDPR policy. Papercups
+                  stores the customer conversations in local storage. We don't
+                  store IP addresses or use any cookies in our{' '}
+                  <a href="https://github.com/papercups-io/chat-widget">
+                    chat widget
+                  </a>{' '}
+                  . So no need for cookie banners.
                 </Paragraph>
               </Box>
 
-              <Box flex={1} mx={[0, 4]}>
-                <Flex
-                  alignItems="center"
-                  justifyContent="center"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                  }}
-                >
-                  <img
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      minHeight: 320,
-                    }}
-                    src="customize.svg"
-                  />
-                </Flex>
-              </Box>
-            </Flex>
-            <Flex mb={[5, 6]} mx={[0, -4]} flexDirection={['column', 'row']}>
               <Box flex={1} mx={[0, 4]}>
                 <Flex
                   alignItems="center"
@@ -254,19 +233,39 @@ export default class extends Component {
                   />
                 </Flex>
               </Box>
+            </Flex>
+            <Flex mb={[5, 6]} mx={[0, -4]} flexDirection={['column', 'row']}>
+              <Box flex={1} mx={[0, 4]}>
+                <Flex
+                  alignItems="center"
+                  justifyContent="center"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                  }}
+                >
+                  <img
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      minHeight: 320,
+                    }}
+                    src="customize.svg"
+                  />
+                </Flex>
+              </Box>
               <Box pt={100} flex={1} mx={[0, 4]} mb={[4, 0]}>
-                <Title level={3}>Save your developer's time</Title>
+                <Title level={3}>Fully customizable widget</Title>
                 <Paragraph>
-                  Papercups is open source and made with a developer in mind. We
-                  support HTML, React, React Native and Flutter integrations.
-                  Our integration takes minutes to setup and if you can't do it
-                  in minutes we'll hop on a zoom call and do it for you!
+                  We provide a react component, vue component, Papercups is open
+                  source and made with a developer in mind. We support HTML,
+                  React, React Native and Flutter integrations.
                 </Paragraph>
               </Box>
             </Flex>
 
             <Flex justifyContent="center" mb={[4, 5]} mt={[6, 0]}>
-              <Title level={2}>Papercups for Enterprise</Title>
+              <Title level={2}>Why use Papercups?</Title>
             </Flex>
 
             <Flex
@@ -276,32 +275,35 @@ export default class extends Component {
               flexDirection={['column', 'row']}
             >
               <Flex flex={1} mx={3} my={[3, 0]} flexDirection="column">
-                <Title level={3}>Self-managed</Title>
+                <Title level={3}>Quick setup</Title>
                 <Paragraph>
-                  Papercups can be deployed in your cloud, for painless adoption
-                  and onboarding. Whether it's AWS, Docker, or Heroku, we've got
-                  you covered.
+                  Papercups is open source and built for developers by
+                  developers. We know how busy your engineering team is so we
+                  make our setup incredibly simple On average it takes our users
+                  less than 10 minutes to setup and customize our chat widget.
                 </Paragraph>
               </Flex>
               <Flex flex={1} mx={3} my={[3, 0]} flexDirection="column">
-                <Title level={3}>Unlimited volume</Title>
+                <Title level={3}>Slack and Mattermost Integration</Title>
                 <Paragraph>
-                  Papercups is built with Elixir on top of BEAM for incredible
-                  scalability. This scalability extends to our open core pricing
-                  model.
+                  Reply directly from Slack or Mattermost. You never have to
+                  leave your workspace. Most chat widgets say they have Slack or
+                  Mattermost integrations but all they do is link it to their
+                  dashboard.
                 </Paragraph>
               </Flex>
               <Flex flex={1} mx={3} my={[3, 0]} flexDirection="column">
-                <Title level={3}>Personalized support</Title>
+                <Title level={3}>Enterprise</Title>
                 <Paragraph>
-                  We can manage your deployment on your infrastructure. Get the
-                  benefits of self-hosting with the reliability and scalability
-                  of the cloud.
+                  Papercups offer an on premise solutions for Enterprises that
+                  want complete control over your data. With Active
+                  Directory/LDAP integrations to make authenticating seemless
                 </Paragraph>
               </Flex>
+              {/* <Flex flex={1} mx={3} my={[3, 0]} flexDirection="column"></Flex> */}
             </Flex>
 
-            <Flex justifyContent="center" mb={[3, 4]} mt={[6, 0]}>
+            <Flex justifyContent="center" mb={[4, 5]} mt={[6, 0]}>
               <Title level={2}>Connect with us</Title>
             </Flex>
 
@@ -327,15 +329,6 @@ export default class extends Component {
                   rel="noopener noreferrer"
                 >
                   <img src="github-v1.svg" style={{height: 144}} />
-                </a>
-              </Flex>
-              <Flex flex={1} mx={3} my={[3, 0]} justifyContent="center">
-                <a
-                  href="https://discord.gg/Dq2A3eh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src="discord-color.svg" style={{height: 144}} />
                 </a>
               </Flex>
             </Flex>
@@ -399,10 +392,10 @@ export default class extends Component {
         <ChatWidget
           title="Welcome to Papercups!"
           subtitle="Ask us anything in the chat window below 😊"
-          greeting="Hi there! Send us a message and we'll get back to you as soon as we can. In the meantime, check out our [demo](https://app.papercups.io/demo)!"
+          greeting="Hi there! Send us a message and we'll get back to you as soon as we can. In the meantime, check out our [demo](https://app.papercups-eu.io/demo)!"
           emailInputPlaceholder="What's your email address?"
           newMessagesNotificationText="See new messages"
-          primaryColor="#1890ff"
+          primaryColor="#4468A5"
           accountId="eb504736-0f20-4978-98ff-1a82ae60b266"
           iconVariant="filled"
           requireEmailUpfront

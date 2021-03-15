@@ -66,6 +66,10 @@ pre[class*='language-'] {
   color: #627e99;
 }
 
+.index_page_font {
+  font-size: 14px;
+}
+
 .token.punctuation {
   color: #cbd6e2;
 }

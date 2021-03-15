@@ -66,7 +66,7 @@ export default class Container extends React.Component<Props, State> {
           <title>
             Papercups | {this.props.title || 'Open Source Intercom Alternative'}
           </title>
-          <link rel="icon" href="/logo-v2.svg" />
+          <link rel="icon" href="/papercups-eu.svg" />
           <meta
             name="description"
             content="Papercups is an open-source live chat widget. Chat with your customers to improve conversions and customer satisfaction."
@@ -84,7 +84,7 @@ export default class Container extends React.Component<Props, State> {
               <Link href="/">
                 <a>
                   <img
-                    src="/papercups-v2.svg"
+                    src="/papercups-eu.svg"
                     style={{height: 40, width: 160}}
                   />
                 </a>
@@ -123,7 +123,7 @@ export default class Container extends React.Component<Props, State> {
                 </Menu.Item>
                 <Menu.Item style={{margin: '0 1em'}} key="Sign up">
                   <a
-                    href="https://app.papercups.io"
+                    href="https://app.papercups-eu.io"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -160,7 +160,7 @@ export default class Container extends React.Component<Props, State> {
         <ChatWidget
           title="Welcome to Papercups!"
           subtitle="Ask us anything in the chat window below 😊"
-          greeting="Hi there! Send us a message and we'll get back to you as soon as we can. In the meantime, check out our [demo](https://app.papercups.io/demo)!"
+          greeting="Hi there! Send us a message and we'll get back to you as soon as we can. In the meantime, check out our [demo](https://app.papercups-eu.io/demo)!"
           primaryColor="#1890ff"
           accountId="eb504736-0f20-4978-98ff-1a82ae60b266"
           iconVariant="filled"
@@ -173,7 +173,7 @@ export default class Container extends React.Component<Props, State> {
               case '/pricing':
                 return "Hi there! Let us know if you have any questions about pricing :) (we're offering deals to startups and international founders)";
               default:
-                return "Hi there! Send us a message and we'll get back to you as soon as we can. In the meantime, check out our [demo](https://app.papercups.io/demo)!";
+                return "Hi there! Send us a message and we'll get back to you as soon as we can. In the meantime, check out our [demo](https://app.papercups-eu.io/demo)!";
             }
           }}
         />

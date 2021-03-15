@@ -57,7 +57,7 @@ export const PricingOptions = () => {
         description="Basic live chat and inbox to get you started."
         cta={
           <a
-            href="https://app.papercups.io/register?redirect=/account/getting-started&utm_source=pricing_page&plan=Starter"
+            href="https://app.papercups-eu.io/register?redirect=/account/getting-started&utm_source=pricing_page&plan=Starter"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -68,7 +68,7 @@ export const PricingOptions = () => {
         }
         pricing={
           <Text>
-            <Text strong>$0</Text> forever
+            $<Text strong>7</Text>/month
           </Text>
         }
         features={
@@ -77,7 +77,7 @@ export const PricingOptions = () => {
 
             <Paragraph>
               <li>2 seats included</li>
-              <li>100,000 messages</li>
+              <li>1,000 messages</li>
               <li>30 day message retention</li>
               <li>Customizable chat widget</li>
             </Paragraph>
@@ -89,7 +89,7 @@ export const PricingOptions = () => {
         description="Essential chat functionality for your business."
         cta={
           <a
-            href="https://app.papercups.io/register?redirect=/account/getting-started&utm_source=pricing_page&plan=Lite"
+            href="https://app.papercups-eu.io/register?redirect=/account/getting-started&utm_source=pricing_page&plan=Lite"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -100,7 +100,7 @@ export const PricingOptions = () => {
         }
         pricing={
           <Text>
-            <Text strong>$34</Text>/month
+            $<Text strong>41</Text>/month
           </Text>
         }
         features={
@@ -108,7 +108,7 @@ export const PricingOptions = () => {
             Everything in <Text strong>Starter</Text> plus:
             <Paragraph>
               <li>4 seats included</li>
-              <li>Unlimited messages</li>
+              <li>10,000 messages</li>
               <li>3 months data retention</li>
               <li>Private notes</li>
               <li>Reply from Slack</li>
@@ -121,7 +121,7 @@ export const PricingOptions = () => {
         description="Supercharge your support, sales, and marketing."
         cta={
           <a
-            href="https://app.papercups.io/register?redirect=/billing&utm_source=pricing_page&plan=Team"
+            href="https://app.papercups-eu.io/register?redirect=/billing&utm_source=pricing_page&plan=Team"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -132,7 +132,7 @@ export const PricingOptions = () => {
         }
         pricing={
           <Text>
-            <Text strong>$94</Text>/month
+            $<Text strong>101</Text>/month
           </Text>
         }
         features={
@@ -143,6 +143,7 @@ export const PricingOptions = () => {
 
             <Paragraph>
               <li>10 seats included</li>
+              <li>Unlimited messages</li>
               <li>Unlimited data retention</li>
               <li>Website screen sharing</li>
               <li>Webhooks</li>
@@ -171,6 +172,9 @@ export const PricingOptions = () => {
 
             <Paragraph>
               <li>Unlimited seats</li>
+              <li>Active Directory/LDAP</li>
+              <li>Okta or OneLogin SSO</li>
+              <li>Advanced access control policy</li>
               <li>On premise deployment</li>
               <li>Custom integrations</li>
             </Paragraph>
@@ -195,11 +199,7 @@ const Pricing = () => {
         <Flex mx={-3} mb={3} justifyContent="space-between">
           <Box mx={3}>
             <CheckCircleTwoTone style={{marginRight: 8}} />
-            30 day free trial
-          </Box>
-          <Box mx={3}>
-            <CheckCircleTwoTone style={{marginRight: 8}} />
-            No credit card required
+            14 day free trial
           </Box>
           <Box mx={3}>
             <CheckCircleTwoTone style={{marginRight: 8}} />
