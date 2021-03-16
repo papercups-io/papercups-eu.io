@@ -1,0 +1,65 @@
+import {Box, Flex, Image} from 'rebass';
+import Layout from '../components/layout';
+
+export default ({children}) => (
+  <Layout title="Papercups Data Policy">{children}</Layout>
+);
+
+# Papercups is a GDPR compliant Intercom alternative
+
+Papercups lets you chat with your customer without requiring you to have any cookie banners or data consent forms. Although have a privacy policy [here](/privacy)
+we wanted to write a concise verson of what we track in our chat widget and how it applies to your company and customers.
+
+## Information Collected and Stored
+
+### Chat widget
+
+#### To help our customers debug issues we track the following automatically:
+
+`Current page URL`: We track current URL through `location.href` property. This helps with debugging issues when a user is on the page
+
+`Browser`: We track browser through `user_agent` to help debug browser compatibility issues
+
+`Browser version`: We track browser version through `user_agent` again for debugging purposes
+
+`Screen height/width`: We track screen width and height to help debug any rendering issues
+
+`Timezone`: We track time zone through `DateTimeFormat().resolvedOptions().timeZone` to help schedule calls with your customers
+
+For more information about our chatwidget collection you can read our source code [here](https://github.com/papercups-io/chat-widget/blob/master/src/track/info.ts).
+
+#### Optional Information Collected
+
+`Email`: We store your customers email if it is provided with our `requireEmailUpfront` flag
+
+`Customer metadata`: We store any metadata you send in to our `customers` parameter in the chat widget
+
+### StoryTime/Live view
+
+Story Time/Live view is a live screen sharing plugin where you can help your customers debug their issue with the website.
+This is an optional plugin where you can install on your website separately. This feature is purely for live
+streaming purposes and we don't store any of the sessions.
+
+Here is our soruce code for Story [Time/Live View](https://github.com/papercups-io/storytime)
+
+### Cookies
+
+We don't use any cookies on our chat widget so you don't need to add a cookie banner to your website if you use our chat widget. We use local browser storage so that nothing leaves their machine and isn't tracked across websites.
+The biggest limitation with this is
+
+### Hosted in the EU
+
+All of the data we track and store is secured and encrypted in servers in EU (Frankfurt).
+This makes sure that your customer data is being covered by the EU's data privacy and privacy laws
+
+### Data ownership
+
+At Papercups we believe you own your website's data and that it should be easily portable.
+We take data privacy and ownership very seriously and that is why we offer a self hosted version
+of our software so you can manage and maintain absolute control over your data.
+
+### Open source
+
+Papercups is an open source live customer chat tool. Our source code is available and accessible to everyone. This way you can verify our actions yourself and don't have to take our word for it
+
+###

@@ -382,6 +382,11 @@ export default class extends Component {
               />
             </Box>
             <Box p={3}>
+              <a href="/data-policy" className="white_link">
+                Data Policy
+              </a>
+            </Box>
+            <Box p={3}>
               <a href="/privacy" className="white_link">
                 Privacy
               </a>
