@@ -132,7 +132,7 @@ export const PricingOptions = () => {
         }
         pricing={
           <Text>
-            $<Text strong>101</Text>/month
+            $<Text strong>99</Text>/month
           </Text>
         }
         features={
